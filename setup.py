@@ -7,7 +7,7 @@ with open(os.path.join(ROOT_DIR, 'VERSION')) as version_file:
 
 setup(name='pysst',
       version=version,
-      description='Tools to handle data acquired with Sea and Sun (sst) profilers',
+      description='Tools to handle data acquired with Sea and Sun (www.sea-sun-tech.com) profilers',
       url='https://github.com/MarineDataTools/pysst',
       author='Peter Holtermann',
       author_email='peter.holtermann@io-warnemuende.de',
@@ -16,6 +16,15 @@ setup(name='pysst',
       scripts = [],
       entry_points={},
       package_data = {'':['VERSION','rules/standard_names.yaml']},
+      classifiers=[
+        'Development Status :: 4 - Beta',
+        'Topic :: Scientific/Engineering',          
+        'Intended Audience :: Science/Research',
+        'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',  
+        'Operating System :: OS Independent',
+        'Programming Language :: Python :: 3 :: Only',
+      ],
+      python_requires='>=3.4',      
       zip_safe=False)
 
 
