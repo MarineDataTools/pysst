@@ -5,9 +5,16 @@ ROOT_DIR='pysst'
 with open(os.path.join(ROOT_DIR, 'VERSION')) as version_file:
     version = version_file.read().strip()
 
+# read the contents of your README file
+this_directory = os.path.abspath(os.path.dirname(__file__))
+with open(os.path.join(this_directory, 'README.rst'), encoding='utf-8') as f:
+    long_description = f.read()
+
 setup(name='pysst',
       version=version,
       description='Tools to handle data acquired with Sea and Sun (www.sea-sun-tech.com) profilers',
+      long_description=long_description,
+      long_description_content_type='text/x-rst',
       url='https://github.com/MarineDataTools/pysst',
       author='Peter Holtermann',
       author_email='peter.holtermann@io-warnemuende.de',
@@ -25,7 +32,7 @@ setup(name='pysst',
         'Operating System :: OS Independent',
         'Programming Language :: Python :: 3 :: Only',
       ],
-      python_requires='>=3.4',      
+      python_requires='>=3.5',      
       zip_safe=False)
 
 
